@@ -1,0 +1,8 @@
+[xbl.io]
+base_uri = https://xbl.io/api/v2/
+apikey = APIKEY
+
+[xbox]
+gamertag[] = gamertag_1
+gamertag[] = gamertag_N
+message = "The message"

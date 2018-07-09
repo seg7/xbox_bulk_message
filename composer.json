@@ -1,0 +1,15 @@
+{
+    "name": "seg7/xboxclips",
+    "description": "A simple php script do download all your saved clips from Xbox Live.",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "xbox"
+    ],
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}
