@@ -2,7 +2,14 @@
 base_uri = https://xbl.io/api/v2/
 apikey = APIKEY
 
-[xbox]
+[general]
+group = group1
+message = "The message"
+
+[group1]
 gamertag[] = gamertag_1
 gamertag[] = gamertag_N
-message = "The message"
+
+[group2]
+gamertag[] = gamertag_2
+gamertag[] = gamertag_M

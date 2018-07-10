@@ -26,13 +26,13 @@ use GuzzleHttp\Exception\GuzzleException;
 try {
     $client = new GuzzleHttp\Client(['base_uri' => $options['xbl.io']['base_uri']]);
 
-    $message_array = explode("\n", wordwrap(preg_replace('!\s+!', ' ', $options['xbox']['message']), '240'));
+    $message_array = explode("\n", wordwrap(preg_replace('!\s+!', ' ', $options['general']['message']), '240'));
 
     foreach ($message_array as $key => &$value) {
         $message_counter = '(' . ($key + 1) . '/' . count($message_array) . ')';
-        $value .= " $message_counter";
+        if(count($message_array) > 1) $value .= " $message_counter";
         $payload = [
-            'to'      => implode(',', $options['xbox']['gamertag']),
+            'to'      => implode(',', $options[$options['general']['group']]['gamertag']),
             'message' => $value,
         ];
 
